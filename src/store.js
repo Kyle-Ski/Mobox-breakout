@@ -2,10 +2,14 @@ import {observable} from "mobx";
 import {observer} from "mobx-react";
 
 class Store {
-    @observable count=0;
+    @observable count='🎃';
     //all of your "State" goes here
     increment=()=>{
-        this.count++;
+        if(this.count.length % 4 === 2){
+            this.count+='☠️';
+        } else {
+            this.count+='🎃'
+        }
     }
 }
 
