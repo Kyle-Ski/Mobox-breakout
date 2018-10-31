@@ -29,7 +29,7 @@ import Box2 from './box2'
         <Box1 store={this.props.store} />
         <Box2 store={this.props.store} />
         </div>
-        <button onClick={this.increment}> 🎃 bump 🎃 </button>
+        <button onClick={this.increment}> bump {this.props.store.count.length % 4 === 2 ? '☠️':'🎃'} </button>
       </div>
     );
   }
